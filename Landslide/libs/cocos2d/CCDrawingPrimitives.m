@@ -199,6 +199,8 @@ void ccDrawCircle( CGPoint center, float r, float a, NSUInteger segs, BOOL drawL
 	glDisable(GL_TEXTURE_2D);
 	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 	glDisableClientState(GL_COLOR_ARRAY);
+    
+    glEnable(GL_LINE_SMOOTH);
 	
 	glVertexPointer(2, GL_FLOAT, 0, vertices);	
 	glDrawArrays(GL_LINE_STRIP, 0, (GLsizei) segs+additionalSegment);
@@ -207,6 +209,8 @@ void ccDrawCircle( CGPoint center, float r, float a, NSUInteger segs, BOOL drawL
 	glEnableClientState(GL_COLOR_ARRAY);
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 	glEnable(GL_TEXTURE_2D);	
+    
+    glDisable(GL_LINE_SMOOTH);
 	
 	free( vertices );
 }

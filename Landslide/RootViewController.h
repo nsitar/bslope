@@ -11,6 +11,8 @@
 
 @interface RootViewController : UIViewController {
 
+    UIButton *infoButton;
+    
 }
 
 @end
